@@ -1,7 +1,9 @@
 package com.example.testemongo.service;
 
-import java.util.LinkedList;
+import org.springframework.stereotype.Service;
 
+import java.util.LinkedList;
+@Service
 public class CpfService {
     public boolean validacao(String cpf){
         int soma = 0;

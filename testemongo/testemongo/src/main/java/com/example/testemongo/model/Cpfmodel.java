@@ -1,26 +1,36 @@
 package com.example.testemongo.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.UUID;
+import org.springframework.hateoas.RepresentationModel;
+
+import java.io.Serializable;
 
 @Document(collation = "desafio")
-@Getter
-@Setter
-@AllArgsConstructor
-public class Cpfmodel {
+public class Cpfmodel extends RepresentationModel<Cpfmodel> implements Serializable {
     @Id
-    private Integer id;
     private String cpf;
     private Boolean isValidacion;
-    public Cpfmodel(String cpf,boolean isValidacion ){
+
+    public String getCpf() {
+        return cpf;
+    }
+
+
+    public Boolean getValidacion() {
+        return isValidacion;
+    }
+
+    public void setValidacion(Boolean validacion) {
+        isValidacion = validacion;
+    }
+
+    public Cpfmodel(String cpf, Boolean isValidacion) {
         this.cpf = cpf;
         this.isValidacion = isValidacion;
     }
-    public Cpfmodel(){}
+
 
 }
