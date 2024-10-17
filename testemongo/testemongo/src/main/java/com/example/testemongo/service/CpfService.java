@@ -5,7 +5,16 @@ import org.springframework.stereotype.Service;
 import java.util.LinkedList;
 @Service
 public class CpfService {
-    public boolean validacao(String cpf){
+    private String cpf;
+
+    public CpfService(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public CpfService() {
+    }
+
+    public boolean validacao(){
         int soma = 0;
         int numero;
         int numero1Verificado=0;
@@ -17,13 +26,13 @@ public class CpfService {
         do {
             try {
                 contador ++;
-                separado = cpf.charAt(contador);
+                separado = this.cpf.charAt(contador);
                 numero = Integer.parseInt(String.valueOf(separado));
                 cpfnumero.add(numero);
             }catch (NumberFormatException nfe){
                 System.out.println("aaaa");
             }
-        }while (contador < cpf.length()-1);
+        }while (contador < this.cpf.length()-1);
 
         if (cpfnumero.size() == 11){
             contador = 10;
