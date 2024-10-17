@@ -18,12 +18,29 @@ public class CpfController {
     @Autowired
     CpfRep cpfRep;
     //erroooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
-    @PostMapping("/teste") //adiciona um documento
-    public ResponseEntity<Cpfmodel> addcpf (@RequestBody Cpfmodel cpfmodel){
-        return ResponseEntity.status(HttpStatus.CREATED).body(cpfRep.save(cpfmodel));
+//    @PostMapping("/teste") //adiciona um documento
+//    public ResponseEntity<Cpfmodel> addcpf (@RequestBody Cpfmodel cpfmodel){
+//        return ResponseEntity.status(HttpStatus.CREATED).body(cpfRep.save(cpfmodel));
+//
+//    }
+    @GetMapping("/teste/{cpf}")
+    public ResponseEntity<Object> validacion (@PathVariable(value = "cpf")String cpf){
+        Optional<Cpfmodel> prduct0 = cpfRep.findById(cpf);
+        if (prduct0.isEmpty()){
+            Cpfmodel cpfmodel = new Cpfmodel(cpf);
+            return ResponseEntity.status(HttpStatus.OK).body(addcpf(cpfmodel));
+        }
+        return ResponseEntity.status(HttpStatus.OK).body(prduct0.get());
 
     }
-
+    @PostMapping("/teste") //adiciona um documento
+    public ResponseEntity<Object> addcpf (@RequestBody Cpfmodel cpfmodel){
+        CpfService cpfService = new CpfService(cpfmodel.getCpf());
+        if (cpfService.validacao()) {
+            return ResponseEntity.status(HttpStatus.CREATED).body(cpfRep.save(cpfmodel));
+        }
+        return ResponseEntity.status(HttpStatus.OK).body("Não foi possivel criar resisto");
+    }
     @GetMapping("/cpf") // mostra todos os registos
     public ResponseEntity<List<Cpfmodel>> getAllProducts(){ //mostra todos os documentos
         return ResponseEntity.status(HttpStatus.OK).body(cpfRep.findAll());
