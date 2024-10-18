@@ -42,7 +42,7 @@ public class CpfController {
             cpfmodel.setCpf(cpfService.getCpf());
             return ResponseEntity.status(HttpStatus.CREATED).body(cpfRep.save(cpfmodel));
         }
-        return ResponseEntity.status(HttpStatus.OK).body("Não foi possivel criar resisto");
+        return ResponseEntity.status(HttpStatus.OK).body("Não foi possivel criar registro ");
     }
     @GetMapping("/cpf") // mostra todos os registos
     public ResponseEntity<List<Cpfmodel>> getAllProducts(){ //mostra todos os documentos
