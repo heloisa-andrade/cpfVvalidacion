@@ -22,4 +22,8 @@ public class Cpfmodel {
     public String getCpf() {
         return cpf;
     }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
 }

@@ -29,6 +29,8 @@ public class CpfController {
         if (prduct0.isEmpty()){
             Cpfmodel cpfmodel = new Cpfmodel(cpf);
             return ResponseEntity.status(HttpStatus.OK).body(addcpf(cpfmodel));
+        }else if (prduct0.equals(null)){
+
         }
         return ResponseEntity.status(HttpStatus.OK).body(prduct0.get());
 
@@ -37,6 +39,7 @@ public class CpfController {
     public ResponseEntity<Object> addcpf (@RequestBody Cpfmodel cpfmodel){
         CpfService cpfService = new CpfService(cpfmodel.getCpf());
         if (cpfService.validacao()) {
+            cpfmodel.setCpf(cpfService.getCpf());
             return ResponseEntity.status(HttpStatus.CREATED).body(cpfRep.save(cpfmodel));
         }
         return ResponseEntity.status(HttpStatus.OK).body("Não foi possivel criar resisto");

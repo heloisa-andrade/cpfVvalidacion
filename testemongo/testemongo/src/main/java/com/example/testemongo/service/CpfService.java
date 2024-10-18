@@ -14,6 +14,10 @@ public class CpfService {
     public CpfService() {
     }
 
+    public String getCpf() {
+        return cpf;
+    }
+
     public boolean validacao(){
         int soma = 0;
         int numero;
@@ -30,9 +34,9 @@ public class CpfService {
                 numero = Integer.parseInt(String.valueOf(separado));
                 cpfnumero.add(numero);
             }catch (NumberFormatException nfe){
-                System.out.println("aaaa");
+
             }
-        }while (contador < this.cpf.length()-1);
+        }while (contador < cpf.length()-1);
 
         if (cpfnumero.size() == 11){
             contador = 10;
@@ -41,7 +45,11 @@ public class CpfService {
                 contador--;
             }
             verificador = 11 - soma % 11;
-            numero1Verificado = verificador;
+            if (verificador >=10){
+                numero1Verificado = 0;
+            }else {
+                numero1Verificado = verificador;
+            }
             contador = 10;
             soma = 0;
             for (int i = 1; i < 10; i++) {
@@ -49,8 +57,14 @@ public class CpfService {
                 contador--;
             }
             verificador = (soma % 11);
+
             verificador = 11 - verificador;
-            numero2Verificado = verificador;
+            if (verificador >=10){
+                numero2Verificado = 0;
+            }else {
+                numero2Verificado = verificador;
+            }
+
         }else {
             return false;
         }
