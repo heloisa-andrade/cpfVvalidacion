@@ -1,22 +1,18 @@
-package com.example.testemongo.model;
-
+package com.example.desafio2.Model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-
-import java.io.Serializable;
-
-@Document(collection= "desafio")
-public class Cpfmodel {
+@Document(collection = "desafio")
+public class Desafio2Model {
     @Id
     private String cpf;
 
-    public Cpfmodel(String cpf) {
+    public Desafio2Model(String cpf) {
         this.cpf = cpf;
     }
 
-    public Cpfmodel() {
+    public Desafio2Model() {
     }
 
     public String getCpf() {

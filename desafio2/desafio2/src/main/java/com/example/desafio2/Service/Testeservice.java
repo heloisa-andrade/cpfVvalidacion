@@ -1,17 +1,17 @@
-package com.example.testemongo.service;
+package com.example.desafio2.Service;
 
 import org.springframework.stereotype.Service;
 
 import java.util.LinkedList;
 @Service
-public class CpfService {
+public class Testeservice {
     private String cpf;
 
-    public CpfService(String cpf) {
+    public Testeservice(String cpf) {
         this.cpf = cpf;
     }
 
-    public CpfService() {
+    public Testeservice() {
     }
 
     public String getCpf() {
