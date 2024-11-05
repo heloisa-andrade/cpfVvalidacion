@@ -1,10 +1,16 @@
 package com.example.testemongo.service;
 
+import com.example.testemongo.Repositroy.CpfRep;
 import com.example.testemongo.exception.ValidacionError;
 import com.example.testemongo.model.CpfModel;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.LinkedList;
+import java.util.Optional;
+
 @Service
 public class CpfService {
     private String cpf;
@@ -81,19 +87,29 @@ public class CpfService {
             return (n1 == numero1Verificado) && (n2 == numero2Verificado);
         }catch (NullPointerException nullPointerException){
             return false;
+        }catch (IndexOutOfBoundsException e){
+            return false;
         }
     }
-    public CpfModel save(CpfModel cpfModel){
-        validarValores(cpfModel);
-        return cpfModel;
+    public ResponseEntity<Object> save(CpfModel cpfModel, CpfRep cpfRep){
+        return validarValores(cpfModel,cpfRep);
     }
-    private void  validarValores(CpfModel cpfModel){
-        if (cpfModel.getCpf().isEmpty()){
 
-            if (!validacao()){
-                throw new ValidacionError("Não foi possivel validar o cpf", cpfModel.getCpf());
-            }
+    private ResponseEntity<Object> validarValores(CpfModel cpfModel,CpfRep cpfRep){
+        cpf = cpfModel.getCpf();
+        if (cpf.isEmpty()){
+            return  ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body("Cpf null!");
+        }else if (!validacao()){
+            return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body("Cpf não valido");
         }
+        Optional<CpfModel> cpf0= cpfRep.findById(cpf);
+        cpfModel.setCpf(this.cpf);
+        if (cpf0.isEmpty()) {
+            cpfModel.setIsValidacion(true);
+            return ResponseEntity.status(HttpStatus.CREATED).body(cpfRep.save(cpfModel));
+        }
+        return ResponseEntity.status(HttpStatus.OK).body("Cpf ja validado");
+
 
     }
 }

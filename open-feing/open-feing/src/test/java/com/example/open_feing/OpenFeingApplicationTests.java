@@ -1,10 +1,10 @@
-package com.example.desafio2;
+package com.example.open_feing;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Desafio2ApplicationTests {
+class OpenFeingApplicationTests {
 
 	@Test
 	void contextLoads() {

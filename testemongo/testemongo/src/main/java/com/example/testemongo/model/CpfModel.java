@@ -16,7 +16,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class CpfModel {
     @Id
     private String cpf;
-    private String isValidacion;
+    private Boolean isValidacion;
     public CpfModel(String cpf) {
         this.cpf = cpf;
     }
