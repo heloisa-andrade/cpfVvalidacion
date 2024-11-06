@@ -10,18 +10,10 @@ import java.text.Format;
 
 @SpringBootApplication
 @EnableFeignClients
-public class OpenFeingApplication implements CommandLineRunner {
+public class OpenFeingApplication{
 
 	public static void main(String[] args) {
-		SpringApplication.run(OpenFeingApplication.class, args);
+                                                     		SpringApplication.run(OpenFeingApplication.class, args);
 	}
-	@Autowired
-	private PhotoConsumerFeign photoConsumerFeign;
 
-	@Override
-	public void run(String... args) throws Exception {
-		for (int i = 0; i < this.photoConsumerFeign.getPhotos().size(); i++) {
-			System.out.println(this.photoConsumerFeign.getPhotos(3l));
-		}
-	}
 }

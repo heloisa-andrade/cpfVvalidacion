@@ -7,12 +7,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-@FeignClient(value = "phot-consumer",url = "https://jsonplaceholder.typicode.com/")
-public interface PhotoConsumerFeign {
+@FeignClient(value = "phot-consumer",url = "https://viacep.com.br")
+public interface PhotoConsumerFeign{
 
-    @GetMapping(value = "/photos")
-    List<Photo> getPhotos();
-
-    @GetMapping(value = "/photos/{id}")
-    Photo getPhotos(@PathVariable("id") Long id);
+    @GetMapping(value = "/ws/{cep}/json")
+    Photo getPhotos(@PathVariable("cep") String id);
 }
