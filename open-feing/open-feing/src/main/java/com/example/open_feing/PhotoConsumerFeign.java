@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-@FeignClient(value = "phot-consumer",url = "https://viacep.com.br")
+@FeignClient(value = "phot-consumer",url = "http://viacep.com.br")
 public interface PhotoConsumerFeign{
 
     @GetMapping(value = "/ws/{cep}/json")

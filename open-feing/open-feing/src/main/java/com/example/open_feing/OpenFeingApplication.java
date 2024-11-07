@@ -13,7 +13,7 @@ import java.text.Format;
 public class OpenFeingApplication{
 
 	public static void main(String[] args) {
-                                                     		SpringApplication.run(OpenFeingApplication.class, args);
+		SpringApplication.run(OpenFeingApplication.class, args);
 	}
 
 }

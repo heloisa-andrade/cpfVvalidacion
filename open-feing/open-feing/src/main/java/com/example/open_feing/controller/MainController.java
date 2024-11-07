@@ -15,7 +15,7 @@ public class MainController {
 
     @GetMapping("/teste")
     public ResponseEntity<String> teste (){
-        String aaaaa = String.valueOf(photoConsumerFeign.getPhotos("06256770"));
+        String aaaaa = photoConsumerFeign.getPhotos("04913000").toString();
         return ResponseEntity.status(HttpStatus.OK).body(aaaaa);
     }
 }
