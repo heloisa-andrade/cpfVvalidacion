@@ -1,1 +1,5 @@
 https://thomsdacosta.medium.com/usando-wiremock-para-acelerar-testes-unit%C3%A1rios-e-integrados-com-spring-boot-e-api-oficial-da-marvel-b26d06d61552 
+
+
+
+https://youtu.be/QnfwblMrBd4?si=qaJbr0x075Zt2iCj
