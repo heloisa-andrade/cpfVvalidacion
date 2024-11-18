@@ -99,9 +99,10 @@ public class CpfService {
         cpf = cpfModel.getCpf();
         if (cpf.isEmpty()){
             return  ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body("Cpf null!");
-        }else if (!validacao()){
-            return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body("Cpf não valido");
         }
+//        else if (!validacao()){
+//            return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body("Cpf não valido");
+//        }
         Optional<CpfModel> cpf0= cpfRep.findById(cpf);
         cpfModel.setCpf(this.cpf);
         if (cpf0.isEmpty()) {

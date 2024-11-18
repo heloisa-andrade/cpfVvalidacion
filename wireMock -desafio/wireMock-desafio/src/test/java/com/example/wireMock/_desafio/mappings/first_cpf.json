@@ -1,0 +1,19 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/info?cpf=1234567890"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "name": "Henrique Miranda Paulino",
+      "job":"Desenvolvedor Junior",
+      "RG":"0987654321",
+      "CEP": "05141010",
+      "birth_date": "2006-12-28"
+    }
+  }
+}
