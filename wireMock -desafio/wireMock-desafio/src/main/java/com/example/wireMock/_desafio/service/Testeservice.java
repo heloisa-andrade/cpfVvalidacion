@@ -1,5 +1,6 @@
 package com.example.wireMock._desafio.service;
 
+import com.example.wireMock._desafio.model.CepModel;
 import com.example.wireMock._desafio.model.CpfModel;
 import com.example.wireMock._desafio.model.PessoaModel;
 import com.example.wireMock._desafio.repositroy.CepRep;
@@ -17,11 +18,8 @@ import java.util.Optional;
 public class Testeservice {
     private String cpf;
 
-    public Testeservice(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public Testeservice() {
+    public Testeservice(PessoaRep photoConsumerFeign) {
+        this.photoConsumerFeign = photoConsumerFeign;
     }
 
     public String getCpf() {
@@ -30,10 +28,8 @@ public class Testeservice {
     @Autowired
     private PessoaRep photoConsumerFeign;
 
-    private ResponseEntity<String> teste (CpfModel cpfModel){
-        String aaaaa = photoConsumerFeign.getPessoa(cpfModel.getCpf()).toString();
-        return ResponseEntity.status(HttpStatus.OK).body(aaaaa);
-    }
+    @Autowired
+    private CepRep cepRep;
     public ResponseEntity<Object> valisdar(CpfModel cpfModel, CpfRep cpfRep ){
         cpf = cpfModel.getCpf();
         if (cpf.isEmpty()){
@@ -44,5 +40,17 @@ public class Testeservice {
 //            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Cpf não cadastrado");
 //        }
         return ResponseEntity.status(HttpStatus.OK).body(teste(cpfModel));
+    }
+
+
+
+    private ResponseEntity<Object> teste (CpfModel cpfModel){
+        PessoaModel aaaaa = photoConsumerFeign.getPessoa(cpfModel.getCpf());
+        return ads(aaaaa);
+    }
+
+    private ResponseEntity<Object>ads(PessoaModel pessoaModel){
+        String aaaaa =cepRep.getCep(pessoaModel.getCep()).toString();
+        return ResponseEntity.status(HttpStatus.OK).body(aaaaa);
     }
 }

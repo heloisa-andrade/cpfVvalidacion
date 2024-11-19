@@ -11,9 +11,11 @@ import org.springframework.web.bind.annotation.*;
 public class DesafioController {
     @Autowired
     CpfRep cpfRep ;
+
+    @Autowired
+    Testeservice cpfService;
     @PostMapping("/desafio2")
     public ResponseEntity<Object> salvar(@RequestBody CpfModel cpfModel) {
-        Testeservice cpfService = new Testeservice(cpfModel.getCpf());
         return cpfService.valisdar(cpfModel,cpfRep);
     }
 

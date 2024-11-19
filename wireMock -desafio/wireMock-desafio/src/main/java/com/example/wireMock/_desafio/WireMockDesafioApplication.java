@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
-@EnableFeignClients
+@EnableFeignClients(basePackages = "com.example.wireMock._desafio.repositroy")
 public class WireMockDesafioApplication {
 
 	public static void main(String[] args) {

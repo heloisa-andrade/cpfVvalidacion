@@ -12,7 +12,7 @@ public class PessoaModel {
     private String name;
     private String job ;
     private String rg;
-    private int cep;
+    private String cep;
     private Date birth_date;
 
 }
