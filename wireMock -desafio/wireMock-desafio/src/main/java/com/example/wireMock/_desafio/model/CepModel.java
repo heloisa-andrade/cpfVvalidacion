@@ -8,7 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 @ToString
 public class CepModel {
-    private String cep;
+    private String CEP;
     private String logradouro;
     private String complento;
     private  String unidade;

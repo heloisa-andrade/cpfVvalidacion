@@ -11,8 +11,8 @@ import java.util.Date;
 public class PessoaModel {
     private String name;
     private String job ;
-    private String rg;
-    private String cep;
+    private String RG;
+    private String CEP;
     private Date birth_date;
 
 }

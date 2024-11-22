@@ -7,13 +7,9 @@
     <list default="true" id="cb2ee077-4fc9-48a6-9e6a-6dd3d3d2cba9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wireMock/_desafio/WireMockDesafioApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wireMock/_desafio/WireMockDesafioApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wireMock/_desafio/controller/DesafioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wireMock/_desafio/controller/DesafioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wireMock/_desafio/model/CepModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wireMock/_desafio/model/CepModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wireMock/_desafio/model/PessoaModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wireMock/_desafio/model/PessoaModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wireMock/_desafio/repositroy/PessoaRep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wireMock/_desafio/repositroy/PessoaRep.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wireMock/_desafio/service/Testeservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wireMock/_desafio/service/Testeservice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/wireMock/_desafio/WireMockDesafioApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/wireMock/_desafio/WireMockDesafioApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wiremock.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/wireMock/_desafio/wiremock.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,16 +41,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Unnamed.executor": "Run",
-    "Application.WireMockDesafioApplication.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/G14946/Desktop/git_escola/cpfVvalidacion/wireMock -desafio/wireMock-desafio"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Unnamed.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.WireMockDesafioApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/G14946/Documents/back end jhow/back-end/simplificado/simplificado&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\G14946\Downloads\wireMock -desafio\wireMock-desafio\src\main\java\com\example\wireMock\_desafio" />
@@ -91,6 +87,54 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/example/wireMock/_desafio/controller/DesafioController.java</url>
           <line>18</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/wireMock/_desafio/service/Testeservice.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/wireMock/_desafio/service/Testeservice.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/wireMock/_desafio/repositroy/CepRep.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/wireMock/_desafio/service/Testeservice.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/wireMock/_desafio/service/Testeservice.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/wireMock/_desafio/repositroy/PessoaRep.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/wireMock/_desafio/repositroy/CepRep.java</url>
+          <line>10</line>
+          <properties class="com.example.wireMock._desafio.repositroy.CepRep" method="getCep">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/wireMock/_desafio/repositroy/PessoaRep.java</url>
+          <line>12</line>
+          <properties class="com.example.wireMock._desafio.repositroy.PessoaRep" method="getPessoa">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

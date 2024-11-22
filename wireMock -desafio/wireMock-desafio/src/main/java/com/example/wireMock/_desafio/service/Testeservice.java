@@ -50,7 +50,7 @@ public class Testeservice {
     }
 
     private ResponseEntity<Object>ads(PessoaModel pessoaModel){
-        String aaaaa =cepRep.getCep(pessoaModel.getCep()).toString();
+        String aaaaa =cepRep.getCep(pessoaModel.getCEP()).toString();
         return ResponseEntity.status(HttpStatus.OK).body(aaaaa);
     }
 }
